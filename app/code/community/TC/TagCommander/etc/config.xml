@@ -1,0 +1,151 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * TagCommander
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to licence@tagcommander.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Tenbucks to newer
+ * versions in the future.
+ *
+ * @category   TagCommander
+ * @package    TC_TagCommander
+ * @copyright  Copyright (c) 2016 TagCommander (http://www.tagcommander.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author     Webincolor <contact@webincolor.fr>
+ */
+-->
+<config>
+    <modules>
+        <TC_TagCommander>
+            <version>1.0.2</version>
+        </TC_TagCommander>
+    </modules>
+    <global>
+        <blocks>
+            <tagcommander>
+                <class>TC_TagCommander_Block</class>
+            </tagcommander>
+        </blocks>
+        <helpers>
+            <tagcommander>
+                <class>TC_TagCommander_Helper</class>
+            </tagcommander>
+        </helpers>
+        <models>
+            <tagcommander>
+                <class>TC_TagCommander_Model</class>
+            </tagcommander>
+        </models>
+        <resources>
+            <tagcommander_setup>
+                <setup>
+                    <module>TC_TagCommander</module>
+                    <class>Mage_Sales_Model_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </tagcommander_setup>
+            <tagcommander_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </tagcommander_write>
+            <tagcommander_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </tagcommander_read>
+        </resources>
+    </global>
+    <adminhtml>
+        <translate>
+            <modules>
+                <tagcommander>
+                    <files>
+                        <default>TC_TagCommander.csv</default>
+                    </files>
+                </tagcommander>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <tagcommander>
+                    <file>tagcommander.xml</file>
+                </tagcommander>
+            </updates>
+        </layout>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <tagcommander translate="title">
+                                            <title>TagCommander</title>
+                                            <sort_order>110</sort_order>
+                                        </tagcommander>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <crontab>
+        <jobs>
+            <tagcommander_conversion>
+                <schedule>
+                    <cron_expr>20 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>tagcommander/observer::sendOrders</model>
+                </run>
+            </tagcommander_conversion>
+            <tagcommander_users>
+                <schedule>
+                    <cron_expr>10 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>tagcommander/observer::sendUsers</model>
+                </run>
+            </tagcommander_users>
+        </jobs>
+    </crontab>
+    <default>
+        <tagcommander>
+            <general>
+                <id>2341</id>
+                <token>QRvTIcnZ7WF0fl4rtA632s0Wb88X8755</token>
+            </general>
+            <orders>
+                <enable>1</enable>
+                <status>processing</status>
+                <start_from_order_id>1</start_from_order_id>
+                <comment>1</comment>
+                <paid>1</paid>
+            </orders>
+            <customers>
+                <enable>1</enable>
+            </customers>
+        </tagcommander>
+    </default>
+</config>

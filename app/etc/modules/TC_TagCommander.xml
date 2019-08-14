@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <TC_TagCommander>
+            <active>true</active>
+            <codePool>community</codePool>
+        </TC_TagCommander>
+    </modules>
+</config>

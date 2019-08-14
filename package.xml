@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>TC_TagCommander</name>
+    <version>1.0.2</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">The Open Software License 3.0 (OSL-3.0)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>TagCommander (Enterprise Tag and Data Management System)</summary>
+    <description>TagCommander&#x2019;s real-time marketing hub allows marketers to manage the deployment lifecycle and data of over 800 marketing solutions with point-and-click simplicity.</description>
+    <notes>Update of Conversions API call</notes>
+    <authors><author><name>Web In Color</name><user>webincolor</user><email>contact@webincolor.fr</email></author></authors>
+    <date>2016-04-14</date>
+    <time>13:14:05</time>
+    <contents><target name="magecommunity"><dir name="TC"><dir name="TagCommander"><dir name="Helper"><file name="Data.php" hash="f70b2ab04cdd7f0bfa7187c8fd1f2bbb"/></dir><dir name="Model"><dir name="Api"><file name="Engage.php" hash="1cb5bd37097412ee1e55f290dc3a8eb3"/></dir><dir name="Customer"><file name="Api.php" hash="c38d3e383881900cf7182d4a3d6b0e91"/><file name="Customer.php" hash="a661087159744b02e5c7e0016cce5e27"/></dir><file name="Observer.php" hash="ec4eba24f62612be6549cf00f5c949ee"/><dir name="Sales"><file name="Api.php" hash="c0d77badbee2dbd17b58e5b979508b54"/><file name="Order.php" hash="995daa519ea73a51613582807edc852d"/></dir></dir><dir name="etc"><file name="config.xml" hash="b9c25bc59601112f2e8c2cdc5a4cd6cb"/><file name="system.xml" hash="d2ae6c8e8537d5a4e5bf906f4b1e64ca"/></dir><dir name="sql"><dir name="tagcommander_setup"><file name="mysql4-install-1.0.0.php" hash="d35a6f4090b61237b34ac99ba5be143d"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="TC_TagCommander.xml" hash="c3c61d322c9051ab4f1b07e376f1e109"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="tagcommander.xml" hash="c603555171a2646875ea67102c5d7270"/></dir></dir></dir></dir></target><target name="magelocale"><dir><dir name="en_US"><file name="TC_TagCommander.csv" hash="57f3491b821d826096c62a767a7de9e9"/></dir><dir name="fr_FR"><file name="TC_TagCommander.csv" hash="31551547d156c952055b6c5a821caea4"/></dir></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="tagcommander"><dir><dir name="css"><file name="styles.css" hash="e4ef9f3df639a58c6ba0d8c66e8a7775"/></dir><dir name="images"><file name="logo.png" hash="38d58ead9c7d6b99936519f70c34d80f"/></dir></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>7.2.0</max></php></required></dependencies>
+</package>

@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/TC_TagCommander",
+    "type": "magento-module",
+    "license": "The-Open-Software-License-3.0-(OSL-3.0)",
+    "homepage": "",
+    "description": "TagCommander (Enterprise Tag and Data Management System)",
+    "authors": [
+    {
+        "name": "Web In Color",
+        "email": "contact@webincolor.fr"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
